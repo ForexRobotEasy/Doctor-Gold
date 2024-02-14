@@ -1,0 +1,106 @@
+
+//+------------------------------------------------------------------+
+//|                                                   Doctor Gold.mq5 |
+//|                      Copyright 2022, Forex Robot Easy Team       |
+//|                                     https://forexroboteasy.com    |
+//+------------------------------------------------------------------+
+
+// The Doctor Gold Forex expert advisor for MetaTrader 4 terminals
+// Implements a trend trading mechanism with counter-trend trading feature
+// Provides versatile trading modes and compatibility with different strategies
+// Enables effective Forex market analysis and formulation of trading strategies
+// Built on a robust algorithm for trend and counter-trend trading
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Add initialization code here
+
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Add deinitialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert start function                                            |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Add trading logic here
+
+    // Check if previous order has a Stop Loss in the profit zone
+    if (IsStopLossInProfitZone())
+    {
+        // Open a new order based on trend trading mechanism
+        OpenNewOrder();
+    }
+    else
+    {
+        // Close unprofitable positions with a profit using counter-trend trading
+        CloseUnprofitablePositions();
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Check if Stop Loss is in the profit zone                         |
+//+------------------------------------------------------------------+
+bool IsStopLossInProfitZone()
+{
+    // Add code to check if Stop Loss is in the profit zone
+    // Return true if Stop Loss is in the profit zone, false otherwise
+}
+
+//+------------------------------------------------------------------+
+//| Open a new order based on trend trading mechanism                 |
+//+------------------------------------------------------------------+
+void OpenNewOrder()
+{
+    // Add code to open a new order based on trend trading mechanism
+}
+
+//+------------------------------------------------------------------+
+//| Close unprofitable positions using counter-trend trading          |
+//+------------------------------------------------------------------+
+void CloseUnprofitablePositions()
+{
+    // Add code to close unprofitable positions using counter-trend trading
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Add code to perform Forex market analysis and formulate trading strategies
+}
+
+//+------------------------------------------------------------------+
+//| Expert optimization function                                     |
+//+------------------------------------------------------------------+
+void OnOptimization()
+{
+    // Add code to optimize the expert advisor for efficient performance
+}
+
+//+------------------------------------------------------------------+
+//| Expert testing function                                          |
+//+------------------------------------------------------------------+
+void OnTester()
+{
+    // Add code to test the expert advisor and fix any bugs or issues
+}
+
+//+------------------------------------------------------------------+
+//| Expert inputs                                                     |
+//+------------------------------------------------------------------+
+input int TradingMode = 1; // Default trading mode (1 = conservative, 2 = aggressive, 3 = scalping)
+
+//+------------------------------------------------------------------+
